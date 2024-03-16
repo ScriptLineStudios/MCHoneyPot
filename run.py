@@ -5,7 +5,7 @@ import os
 import json
 
 logging.basicConfig(
-    level=logging.info, format="%(asctime)s-%(levelname)s: %(message)s", datefmt="%d-%b-%y %H:%M:%S"
+    level=logging.INFO, format="%(asctime)s-%(levelname)s: %(message)s", datefmt="%d-%b-%y %H:%M:%S"
 )
 
 def handle_config():
