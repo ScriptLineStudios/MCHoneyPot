@@ -34,7 +34,16 @@ Additionally reports are made to https://www.abuseipdb.com/
 
 ## Getting Started
 
-If you are not interested in hosting your own instance, you can head over to our <a href="https://discord.gg/7QSnA726dx">Discord Server</a> and interact with our hosted version of the bot. If however you would like to host your own bot instance you will need the following:
+If you would simplily like to interact with the hosted version of the bot, you can do so by joining our <a href="https://discord.gg/7QSnA726dx">Discord Server</a> where you can feel free to interact with the bot as you please.
+
+Alternatively you can invite the bot to your own server using the following <a href="https://discord.com/oauth2/authorize?client_id=1216381150910742558&permissions=826781321280&scope=bot">invite</a>
+Once the bot is in your server run /configure in the channel where you would like the bot to output logs!
+
+![Screenshot from 2024-03-16 18-49-27](https://github.com/ScriptLineStudios/MCHoneyPot/assets/85095943/d664de43-29c8-448b-b645-26bfd1505460)
+
+## Running your own instance
+
+In order to run your own instance of MCHoneyPot you will need the following:
 
 * An account and API key on https://www.abuseipdb.com/
 * A fresh Discord bot token
