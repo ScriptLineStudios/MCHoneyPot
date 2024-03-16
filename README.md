@@ -9,4 +9,6 @@ The goal is to index, report, and raise awareness of mass server scanning and ho
 
 All interactions made with the server are logged:
 
-![Screenshot from 2024-03-16 09-23-01](https://github.com/ScriptLineStudios/MCHoneyPot/assets/85095943/84d21a45-53df-41a2-b6b3-56e9830654c9)
+![Screenshot from 2024-03-16 09-23-01](https://github.com/ScriptLineStudios/MCHoneyPot/assets/85095943/99ef5772-b4ea-49fc-af1e-efad24713aae)
+
+Additionally reports are made https://www.abuseipdb.com/  
