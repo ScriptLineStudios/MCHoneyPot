@@ -22,7 +22,9 @@ MCHoneyPot works by creating realistic looking Minecraft server, faking details 
 It's job is to log all attempts made to interact with the server including pings, status requests, and attempts to join.
 The goal is to index, report, and raise awareness of mass server scanning and how it can affect server owners.
 
-![Screenshot from 2024-03-16 19-00-02](https://github.com/ScriptLineStudios/MCHoneyPot/assets/85095943/2112eb7d-8935-40eb-8e57-2264742d2306)
+<p align="center">
+<img src="https://github.com/ScriptLineStudios/MCHoneyPot/assets/85095943/a531528a-0d4e-495b-bc76-59c322fdab8a">
+</p>
 
 All interactions made with the server are logged:
 
@@ -39,9 +41,7 @@ If you would simplily like to interact with the hosted version of the bot, you c
 Alternatively you can invite the bot to your own server using the following <a href="https://discord.com/oauth2/authorize?client_id=1216381150910742558&permissions=826781321280&scope=bot">invite</a>
 Once the bot is in your server run /configure in the channel where you would like the bot to output logs!
 
-<p align="center">
-<img src="https://github.com/ScriptLineStudios/MCHoneyPot/assets/85095943/a531528a-0d4e-495b-bc76-59c322fdab8a">
-</p>
+![Screenshot from 2024-03-16 18-49-27](https://github.com/ScriptLineStudios/MCHoneyPot/assets/85095943/cd280f9e-ae4b-42e1-9c47-fd4fca704c34)
 
 ## Running your own instance
 
