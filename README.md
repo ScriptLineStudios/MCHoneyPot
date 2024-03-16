@@ -1,5 +1,7 @@
 # MCHoneyPot
 ### Hosted here - https://discord.gg/7QSnA726dx
+
+### About
 A Minecraft server honeypot built to report mass server scanning. 
 
 MCHoneyPot works by creating a realistic looking Minecraft server, faking details such as players online, server version etc. 
