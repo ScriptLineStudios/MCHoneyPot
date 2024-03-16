@@ -46,7 +46,7 @@ class Bot:
         @self.bot.tree.command(name="stats", description="Display honeypot stats!")
         async def stats(interaction: discord.Interaction):
             username = self.db.get_latest_join()[0]["name"]
-            embed = discord.Embed(title="Statistics", description="Honeypot Statistics") #,color=Hex code
+            embed = discord.Embed(title="Statistics", description="Honeypot Statistics", color=discord.Color.red())
             embed.set_author(name="MCHoneyPot")
             embed.add_field(name="Total pings", value=self.db.get_ping_size())
             embed.add_field(name="Total joins", value=self.db.get_join_size())
@@ -63,9 +63,11 @@ class Bot:
             joins = list(self.db.get_latest_join(5))
             embeds = []
             for join in joins:
-                embed = discord.Embed(title="Join") #,color=Hex code
+                ping = self.db.ping_collection.find_one({"ip": join["ip"]})
+                embed = discord.Embed(title="Join", color=discord.Color.blue())
                 embed.set_author(name="MCHoneyPot")
-                embed.add_field(name=f"{join['name']}", value=join["ip"], inline=False)
+                embed.add_field(name=f"{join['name']}", value=f"{join['ip']}", inline=False)
+                embed.add_field(name=f":flag_{ping['country'].lower()}:", value="", inline=False)
                 embed.set_thumbnail(url=f"https://mineskin.eu/avatar/{join['name']}")
                 embeds.append(embed)
 
