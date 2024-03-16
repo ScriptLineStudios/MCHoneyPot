@@ -28,4 +28,24 @@ All interactions made with the server are logged:
 
 ![Screenshot from 2024-03-16 09-23-43](https://github.com/ScriptLineStudios/MCHoneyPot/assets/85095943/0ec9e6bf-3b07-43d4-95e4-53162bdb896f)
 
-Additionally reports are made https://www.abuseipdb.com/  
+![Screenshot from 2024-03-16 18-05-17](https://github.com/ScriptLineStudios/MCHoneyPot/assets/85095943/cb02ea5e-55de-4583-a956-706753aec757)
+
+Additionally reports are made to https://www.abuseipdb.com/  
+
+### Getting Started
+
+If you are not interested in hosting your own instance, you can head over to our <a href="https://discord.gg/7QSnA726dx">Discord Server</a> and interact with our hosted version of the bot. If however you would like to host your own bot instance you will need the following:
+
+* An account and API key on https://www.abuseipdb.com/
+* A fresh Discord bot token
+* A MongoDB database with the following 3 collections: ```Pings```, ```Joins```, and ```Reports```
+
+To get started simpily:
+```bash
+git clone https://github.com/ScriptLineStudios/MCHoneyPot
+cd MCHoneyPot
+pip install -r requirements.txt
+python run.py
+```
+
+On you first run, you will be promopted to give your API keys/tokens to your newly created config file. Once you have done this you can run the script again and you should be good to go!
