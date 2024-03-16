@@ -1,3 +1,4 @@
+import pymongo
 from pymongo.mongo_client import MongoClient
 from src.config import config
 import logging
@@ -21,3 +22,26 @@ class Database:
     def insert_report(self, record):
         logging.info("Inserting record into report collection")
         self.report_collection.insert_one(record)
+
+    def get_latest_join(self, num=1):
+        latest_doc = self.join_collection.find().sort("_id", pymongo.DESCENDING).limit(num)
+        return latest_doc
+
+    def get_latest_ping(self, num=1):
+        latest_doc = self.ping_collection.find().sort("_id", pymongo.DESCENDING).limit(num)
+        return latest_doc
+
+    def get_latest_report(self, num=1):
+        latest_doc = self.report_collection.find().sort("_id", pymongo.DESCENDING).limit(num)
+        return latest_doc
+
+    def get_join_size(self):
+        return self.join_collection.estimated_document_count()
+
+    def get_ping_size(self):
+        return self.ping_collection.estimated_document_count()
+
+    def get_report_size(self):
+        return self.report_collection.estimated_document_count()
+
+# print(Database().get_latest_join()[0]["_id"].generation_time)
