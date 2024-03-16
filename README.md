@@ -1,14 +1,12 @@
 <h1 align="center"><b>MCHoneyPot</b></h1>
 <p align="center">
-  <img src="https://img.shields.io/badge/license-MIT-blue.svg">
-  [![](https://dcbadge.vercel.app/api/server/INVITEID)](https://discord.gg/INVITEID)
+  <a>https://dcbadge.vercel.app/api/server/7QSnA726dx</a>
 </p>
 <p align="center">
-Lumina is a lightweight and cross-platform 2D game engine.
+A Minecraft server honeypot built to report mass server scanning. 
 </p>
 
 ### About
-A Minecraft server honeypot built to report mass server scanning. 
 
 MCHoneyPot works by creating a realistic looking Minecraft server, faking details such as players online, server version etc. 
 It's job is to log all attempts made to interact with the server including pings, status requests, and attempts to join.
