@@ -1,5 +1,6 @@
-# MCHoneyPot
-## https://discord.gg/7QSnA726dx
+<center># MCHoneyPot
+![Discord Badge](https://img.shields.io/badge/Discord-5865F2?logo=discord&logoColor=fff&style=flat)
+</center>
 
 ### About
 A Minecraft server honeypot built to report mass server scanning. 
