@@ -3,6 +3,7 @@ from src.bot import Bot
 from src.server import Server
 from src.config import config
 
+
 class ServerManager:
     def __init__(self):
         self.ports = [25565, 25566, 25567]

@@ -5,23 +5,32 @@ import os
 import json
 
 logging.basicConfig(
-    level=logging.INFO, format="%(asctime)s-%(levelname)s: %(message)s", datefmt="%d-%b-%y %H:%M:%S"
+    level=logging.INFO,
+    format="%(asctime)s-%(levelname)s: %(message)s",
+    datefmt="%d-%b-%y %H:%M:%S",
 )
+
 
 def handle_config():
     with open("config.json", "w") as f:
-        f.write(json.dumps({
-            "discord_token": "",
-            "abuseipdb_token": "",
-            "mongo_uri": "",
-            "database_name": ""
-        }))
-    logging.info("No config file found! Please fill in the one we just created.")            
+        f.write(
+            json.dumps(
+                {
+                    "discord_token": "",
+                    "abuseipdb_token": "",
+                    "mongo_uri": "",
+                    "database_name": "",
+                }
+            )
+        )
+    logging.info("No config file found! Please fill in the one we just created.")
     exit(1)
+
 
 if __name__ == "__main__":
     if not os.path.exists("config.json"):
         handle_config()
 
     from src.managers import Manager
+
     Manager().start()

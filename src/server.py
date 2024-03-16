@@ -31,9 +31,7 @@ class Server:
         self.packets = queue.Queue()
         self.db = Database()
         self.api = API()
-        self.reporter = abuseipdb.AbuseIpDb(
-            config.abuseipdb_token
-        )
+        self.reporter = abuseipdb.AbuseIpDb(config.abuseipdb_token)
         self.packet_handles = {
             0: {
                 -1: self.handle_status_request,
@@ -44,19 +42,25 @@ class Server:
 
     def handle_ping(self, addr):
         details = ip_details(addr[0])
-        self.db.insert_ping({
-            "ip": addr[0],
-            "time": time.time(),
-            "city": details["City:"],
-            "state": details["State:"],
-            "country": details["Country:"],
-            "gps": details["GPS:"],
-            "zip": details["ZIP:"],
-            "isp": details["ISP:"]
-        })
+        self.db.insert_ping(
+            {
+                "ip": addr[0],
+                "time": time.time(),
+                "city": details["City:"],
+                "state": details["State:"],
+                "country": details["Country:"],
+                "gps": details["GPS:"],
+                "zip": details["ZIP:"],
+                "isp": details["ISP:"],
+            }
+        )
 
         try:
-            report = self.reporter.report(ip_address=addr[0], categories=(14), comment="Port scanning for vulnerable Minecraft servers.")
+            report = self.reporter.report(
+                ip_address=addr[0],
+                categories=(14),
+                comment="Port scanning for vulnerable Minecraft servers.",
+            )
             self.db.insert_report(report)
         except TypeError:
             pass
@@ -81,7 +85,7 @@ class Server:
         self.manager.message_queue.put(
             f"New ping on port `{self.port}` from: <`{addr}`>"
         )
-        threading.Thread(target=self.handle_ping, args=(addr, )).start()
+        threading.Thread(target=self.handle_ping, args=(addr,)).start()
 
     def handle_play_request(self, buffer, conn, addr):
         name = buffer.unpack_string()
@@ -99,11 +103,7 @@ class Server:
         except mojang.errors.NotFound:
             pass
 
-        self.db.insert_join({
-            "ip": addr[0],
-            "name": name,
-            "uuid": uuid 
-        })
+        self.db.insert_join({"ip": addr[0], "name": name, "uuid": uuid})
 
     def handle_ping_request(self, buffer, conn, addr):
         long = buffer.read()

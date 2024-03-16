@@ -3,6 +3,7 @@ from pymongo.mongo_client import MongoClient
 from src.config import config
 import logging
 
+
 class Database:
     def __init__(self):
         self.client = MongoClient(config.mongo_uri)
@@ -14,7 +15,7 @@ class Database:
     def insert_join(self, record):
         logging.info("Inserting record into join collection")
         self.join_collection.insert_one(record)
-    
+
     def insert_ping(self, record):
         logging.info("Inserting record into ping collection")
         self.ping_collection.insert_one(record)
@@ -24,15 +25,21 @@ class Database:
         self.report_collection.insert_one(record)
 
     def get_latest_join(self, num=1):
-        latest_doc = self.join_collection.find().sort("_id", pymongo.DESCENDING).limit(num)
+        latest_doc = (
+            self.join_collection.find().sort("_id", pymongo.DESCENDING).limit(num)
+        )
         return latest_doc
 
     def get_latest_ping(self, num=1):
-        latest_doc = self.ping_collection.find().sort("_id", pymongo.DESCENDING).limit(num)
+        latest_doc = (
+            self.ping_collection.find().sort("_id", pymongo.DESCENDING).limit(num)
+        )
         return latest_doc
 
     def get_latest_report(self, num=1):
-        latest_doc = self.report_collection.find().sort("_id", pymongo.DESCENDING).limit(num)
+        latest_doc = (
+            self.report_collection.find().sort("_id", pymongo.DESCENDING).limit(num)
+        )
         return latest_doc
 
     def get_join_size(self):
@@ -43,5 +50,3 @@ class Database:
 
     def get_report_size(self):
         return self.report_collection.estimated_document_count()
-
-# print(Database().get_latest_join()[0]["_id"].generation_time)
