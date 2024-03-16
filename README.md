@@ -1,6 +1,11 @@
-<center># MCHoneyPot
-![Discord Badge](https://img.shields.io/badge/Discord-5865F2?logo=discord&logoColor=fff&style=flat)
-</center>
+<h1 align="center"><b>MCHoneyPot</b></h1>
+<p align="center">
+  <img src="https://img.shields.io/badge/license-MIT-blue.svg">
+  [![](https://dcbadge.vercel.app/api/server/INVITEID)](https://discord.gg/INVITEID)
+</p>
+<p align="center">
+Lumina is a lightweight and cross-platform 2D game engine.
+</p>
 
 ### About
 A Minecraft server honeypot built to report mass server scanning. 
