@@ -1,5 +1,5 @@
+<img align="center" src="https://static.wikia.nocookie.net/minecraft_gamepedia/images/3/33/Bee_with_nectar_%28angry%29.png/revision/latest/scale-to-width-down/250?cb=20200317174807"></img>
 <h1 align="center"><b>MCHoneyPot</b></h1>
-<img src="https://static.wikia.nocookie.net/minecraft_gamepedia/images/3/33/Bee_with_nectar_%28angry%29.png/revision/latest/scale-to-width-down/250?cb=20200317174807"></img>
 <p align="center">
   <img src="https://img.shields.io/badge/Python-3776AB?logo=python&logoColor=fff&style=for-the-badge"></img>
   <a href="https:/discord.gg/7QSnA726dx">
