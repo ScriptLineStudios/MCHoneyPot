@@ -22,7 +22,7 @@ MCHoneyPot works by creating realistic looking Minecraft server, faking details 
 It's job is to log all attempts made to interact with the server including pings, status requests, and attempts to join.
 The goal is to index, report, and raise awareness of mass server scanning and how it can affect server owners.
 
-![Screenshot from 2024-03-16 09-18-49](https://github.com/ScriptLineStudios/MCHoneyPot/assets/85095943/c906b738-1a25-4db1-ab87-59cb467c1dcb)
+![Screenshot from 2024-03-16 19-00-02](https://github.com/ScriptLineStudios/MCHoneyPot/assets/85095943/2112eb7d-8935-40eb-8e57-2264742d2306)
 
 All interactions made with the server are logged:
 
