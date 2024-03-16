@@ -6,10 +6,6 @@
   <a href="https:/discord.gg/7QSnA726dx">
     <img src="https://dcbadge.vercel.app/api/server/7QSnA726dx"></img>
   </a>
-  <img src="https://img.shields.io/badge/Python-3776AB?logo=python&logoColor=fff&style=for-the-badge"></img>
-  <img src="https://img.shields.io/github/repo-size/ScriptLineStudios/MCHoneyPot?style=%22for-the-badge%22"></img>
-  <br>
-  <img src="https://img.shields.io/github/last-commit/ScriptLineStudios/MCHoneyPot?style=%22for-the-badge%22"></img>
 </p>
 <p align="center">
 A Minecraft server honeypot built to report mass server scanning. 
