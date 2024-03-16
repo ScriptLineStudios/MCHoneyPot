@@ -39,7 +39,9 @@ If you would simplily like to interact with the hosted version of the bot, you c
 Alternatively you can invite the bot to your own server using the following <a href="https://discord.com/oauth2/authorize?client_id=1216381150910742558&permissions=826781321280&scope=bot">invite</a>
 Once the bot is in your server run /configure in the channel where you would like the bot to output logs!
 
-![Screenshot from 2024-03-16 18-49-27](https://github.com/ScriptLineStudios/MCHoneyPot/assets/85095943/d664de43-29c8-448b-b645-26bfd1505460)
+<p align="center">
+<img src="https://github.com/ScriptLineStudios/MCHoneyPot/assets/85095943/a531528a-0d4e-495b-bc76-59c322fdab8a">
+</p>
 
 ## Running your own instance
 
