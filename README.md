@@ -1,6 +1,6 @@
 <h1 align="center"><b>MCHoneyPot</b></h1>
 <p align="center">
-  <a href="https://dcbadge.vercel.app/api/server/7QSnA726dx"></a>
+  <img src="https://dcbadge.vercel.app/api/server/7QSnA726dx"></src>
 </p>
 <p align="center">
 A Minecraft server honeypot built to report mass server scanning. 
