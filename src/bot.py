@@ -72,3 +72,13 @@ class Bot:
                 embeds.append(embed)
 
             await interaction.response.send_message(embeds=embeds)
+
+        @self.bot.tree.command(name="pings", description="Get a list of latest pings")
+        async def stats(interaction: discord.Interaction):
+            pings = list(self.db.get_latest_ping(5))
+
+            embed = discord.Embed(title="Ping", color=discord.Color.green())
+            for ping in pings:
+                embed.add_field(name=f'**{ping["ip"]}**', value=f'> Country: {ping["country"]}\n> City: {ping["city"]}\n> ISP: {ping["isp"]}', inline=False)
+
+            await interaction.response.send_message(embed=embed)
