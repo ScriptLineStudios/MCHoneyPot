@@ -1,5 +1,5 @@
 # MCHoneyPot
-### Hosted here - https://discord.gg/7QSnA726dx
+sub><sup>[Small text](https://discord.gg/7QSnA726dx)</sup></sub>
 
 ### About
 A Minecraft server honeypot built to report mass server scanning. 
