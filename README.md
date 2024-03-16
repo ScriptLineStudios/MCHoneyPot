@@ -38,7 +38,7 @@ If you are not interested in hosting your own instance, you can head over to our
 
 * An account and API key on https://www.abuseipdb.com/
 * A fresh Discord bot token
-* A MongoDB database with the following 3 collections: ```Pings```, ```Joins```, and ```Reports```
+* A MongoDB database with the following 4 collections: ```Pings```, ```Joins```, ```Servers```, and ```Reports```
 
 To get started simpily:
 ```bash
