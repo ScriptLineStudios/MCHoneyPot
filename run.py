@@ -1,8 +1,7 @@
-# import src.database
-
 import logging
 import os
 import json
+import sys
 
 logging.basicConfig(
     level=logging.INFO,
@@ -26,11 +25,17 @@ def handle_config():
     logging.info("No config file found! Please fill in the one we just created.")
     exit(1)
 
+def usage():
+    print("Usage: python run.py [LIST OF PORTS]")
+    print("     Example: python run.py 25565 25566 25567")
+    exit(0)
 
 if __name__ == "__main__":
     if not os.path.exists("config.json"):
         handle_config()
+    if len(sys.argv) <= 1:
+        usage()
 
     from src.managers import Manager
 
-    Manager().start()
+    Manager(sys.argv[1:]).start()

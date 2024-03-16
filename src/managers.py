@@ -5,8 +5,8 @@ from src.config import config
 
 
 class ServerManager:
-    def __init__(self):
-        self.ports = [25565, 25566, 25567]
+    def __init__(self, ports):
+        self.ports = ports
         self.message_queue = multiprocessing.Queue()
 
     def start_server(self, port):
@@ -15,13 +15,13 @@ class ServerManager:
 
     def start(self):
         for port in self.ports:
-            process = multiprocessing.Process(target=self.start_server, args=(port,))
+            process = multiprocessing.Process(target=self.start_server, args=(int(port),))
             process.start()
 
 
 class Manager:
-    def __init__(self):
-        self.server_manager = ServerManager()
+    def __init__(self, ports=[25565]):
+        self.server_manager = ServerManager(ports)
         self.bot = Bot(self.server_manager)
 
     def start(self):
