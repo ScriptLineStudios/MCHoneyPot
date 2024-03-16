@@ -18,7 +18,7 @@ A Minecraft server honeypot built to report mass server scanning.
 
 ## About
 
-MCHoneyPot works by creating a realistic looking Minecraft server, faking details such as players online, server version etc. 
+MCHoneyPot works by creating realistic looking Minecraft server, faking details such as players online, server version etc. 
 It's job is to log all attempts made to interact with the server including pings, status requests, and attempts to join.
 The goal is to index, report, and raise awareness of mass server scanning and how it can affect server owners.
 
@@ -54,7 +54,7 @@ To get started simpily:
 git clone https://github.com/ScriptLineStudios/MCHoneyPot
 cd MCHoneyPot
 pip install -r requirements.txt
-python run.py
+python run.py [LIST OF PORTS]
 ```
 
 On you first run, you will be promopted to give your API keys/tokens to your newly created config file. Once you have done this you can run the script again and you should be good to go!
