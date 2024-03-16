@@ -5,7 +5,7 @@ import os
 import json
 
 logging.basicConfig(
-    level=logging.DEBUG, format="%(asctime)s-%(levelname)s: %(message)s", datefmt="%d-%b-%y %H:%M:%S"
+    level=logging.info, format="%(asctime)s-%(levelname)s: %(message)s", datefmt="%d-%b-%y %H:%M:%S"
 )
 
 def handle_config():
@@ -16,7 +16,7 @@ def handle_config():
             "mongo_uri": "",
             "database_name": ""
         }))
-    logging.error("No config file found! Please fill in the one we just created.")            
+    logging.info("No config file found! Please fill in the one we just created.")            
     exit(1)
 
 if __name__ == "__main__":
