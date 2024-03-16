@@ -79,6 +79,6 @@ class Bot:
 
             embed = discord.Embed(title="Ping", color=discord.Color.green())
             for ping in pings:
-                embed.add_field(name=f'**{ping["ip"]}**', value=f'> Country: {ping["country"]}\n> City: {ping["city"]}\n> ISP: {ping["isp"]}', inline=False)
+                embed.add_field(name=f'**{ping["ip"]}**', value=f'> Country: {ping["country"]}\n> City: :flag_{ping['country'].lower()}:\n> ISP: {ping["isp"]}', inline=False)
 
             await interaction.response.send_message(embed=embed)
