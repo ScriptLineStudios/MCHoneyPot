@@ -16,7 +16,7 @@
 A Minecraft server honeypot built to report mass server scanning. 
 </p>
 
-### About
+## About
 
 MCHoneyPot works by creating a realistic looking Minecraft server, faking details such as players online, server version etc. 
 It's job is to log all attempts made to interact with the server including pings, status requests, and attempts to join.
@@ -32,7 +32,7 @@ All interactions made with the server are logged:
 
 Additionally reports are made to https://www.abuseipdb.com/  
 
-### Getting Started
+## Getting Started
 
 If you are not interested in hosting your own instance, you can head over to our <a href="https://discord.gg/7QSnA726dx">Discord Server</a> and interact with our hosted version of the bot. If however you would like to host your own bot instance you will need the following:
 
