@@ -28,7 +28,7 @@ All interactions made with the server are logged:
 
 ![Screenshot from 2024-03-16 09-23-43](https://github.com/ScriptLineStudios/MCHoneyPot/assets/85095943/0ec9e6bf-3b07-43d4-95e4-53162bdb896f)
 
-![Screenshot from 2024-03-16 18-05-17](https://github.com/ScriptLineStudios/MCHoneyPot/assets/85095943/cb02ea5e-55de-4583-a956-706753aec757)
+![Screenshot from 2024-03-16 18-50-55](https://github.com/ScriptLineStudios/MCHoneyPot/assets/85095943/54f13d77-7bce-4f5b-aab3-8066b9c4edb4)
 
 Additionally reports are made to https://www.abuseipdb.com/  
 
