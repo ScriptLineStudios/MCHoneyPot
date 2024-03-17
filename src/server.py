@@ -6,6 +6,7 @@ import logging
 import queue
 import time
 import abuseipdb
+import quarry
 
 from src.bot import Bot
 from src.details import ServerDetails
