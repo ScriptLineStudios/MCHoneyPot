@@ -121,7 +121,12 @@ class Server:
             data = conn.recv(1)
             if not data:
                 break
-            length = Buffer(data).unpack_varint()
+            try:
+                length = Buffer(data).unpack_varint()
+            except quarry.types.buffer.BufferUnderrun:
+                conn.close()
+                break
+
             if length <= 1:
                 continue
 
