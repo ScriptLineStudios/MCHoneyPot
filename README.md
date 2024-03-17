@@ -58,5 +58,6 @@ cd MCHoneyPot
 pip install -r requirements.txt
 python run.py [LIST OF PORTS]
 ```
+<b>IMPORTANT NOTE:</b> the abuseipdb wrapper must be installed manually from here: https://github.com/vsecades/AbuseIpDb
 
 On you first run, you will be promopted to give your API keys/tokens to your newly created config file. Once you have done this you can run the script again and you should be good to go!
