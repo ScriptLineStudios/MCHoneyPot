@@ -33,15 +33,30 @@ class Bot:
     def add_commands(self):
         @tasks.loop(seconds=1)
         async def update():
-            channel = self.bot.get_channel(1218310329415634995)
             while not self.server_manager.message_queue.empty():
                 message = self.server_manager.message_queue.get()
-                await channel.send(message)
+                for server in self.bot.guilds:
+                    channel_id = self.db.server_collection.find_one({"_id": server.id})["channel"]
+                    if channel_id:
+                        channel = self.bot.get_channel(channel_id)
+                        await channel.send(message)
 
         @self.bot.event
         async def on_ready():
             await self.bot.tree.sync()
             await update.start()
+
+        @self.bot.tree.command(name="configure", description="Set the bots output channel to the current channel")
+        async def configure(interaction: discord.Interaction):
+            server = interaction.guild_id
+            self.db.server_collection.update_one({"_id": server}, {"$set":{"_id": server, "channel": interaction.channel_id}}, upsert=True)
+            embed = discord.Embed(
+                title="Success!",
+                description="I will now output logs in this channel!",
+                color=discord.Color.red(),
+            )
+            embed.set_author(name="MCHoneyPot")
+            await interaction.response.send_message(embed=embed)
 
         @self.bot.tree.command(name="stats", description="Display honeypot stats!")
         async def stats(interaction: discord.Interaction):

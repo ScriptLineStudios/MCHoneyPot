@@ -11,6 +11,7 @@ class Database:
         self.join_collection = self.db["Joins"]
         self.ping_collection = self.db["Pings"]
         self.report_collection = self.db["Reports"]
+        self.server_collection = self.db["Servers"]
 
     def insert_join(self, record):
         logging.info("Inserting record into join collection")

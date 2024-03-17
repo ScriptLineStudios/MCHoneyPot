@@ -1,4 +1,3 @@
-abuseipdb==1.3.0
 discord.py==2.3.2
 get_ipinfo==0.1.1
 mojang==1.1.0
